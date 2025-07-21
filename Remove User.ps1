@@ -12,7 +12,7 @@ Connect-AzAccount
 
 #Will then need to select the account in the browser window that opens
 
-Remove-AzADUser -DisplayName "Jane Doe" -Force
+Remove-AzADUser -DisplayName "Jane Doe"
 
   Write-Host "User removed."
   Read-Host -Prompt "Press Enter to exit"
