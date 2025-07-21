@@ -12,14 +12,7 @@ Connect-AzAccount
 
 #Will then need to select the account in the browser window that opens
 
-$SecurePassword = ConvertTo-SecureString "P@ssword123!" -AsPlainText -Force
+Remove-AzADUser -DisplayName "Jane Doe" -Force
 
-New-AzADUser `
-  -DisplayName "Jane Doe" `
-  -UserPrincipalName "janedoe@wilcoxsonrichardgmail.onmicrosoft.com" `
-  -MailNickname "janedoe" `
-  -AccountEnabled $true `
-  -Password $SecurePassword
-
-  Write-Host "New user created successfully."
+  Write-Host "User removed."
   Read-Host -Prompt "Press Enter to exit"
