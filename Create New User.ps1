@@ -1,5 +1,5 @@
 # Install and import only required modules
-Write-Host "Installing required Azure modules..."
+Write-Host "Installing and importing required Azure modules..."
 Install-Module Az.Accounts -Scope CurrentUser -Force
 Install-Module Az.Resources -Scope CurrentUser -Force
 Install-Module Az.Compute -Scope CurrentUser -Force

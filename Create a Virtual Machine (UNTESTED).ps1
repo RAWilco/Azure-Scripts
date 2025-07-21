@@ -1,5 +1,5 @@
 #Install and import only required modules
-Write-Host "Installing required Azure modules..."
+Write-Host "Installing and importing required Azure modules..."
 Install-Module Az.Accounts -Scope CurrentUser -Force
 Install-Module Az.Resources -Scope CurrentUser -Force
 Install-Module Az.Network -Scope CurrentUser -Force
@@ -48,5 +48,5 @@ $vmConfig = New-AzVMConfig -VMName $vmName -VMSize $vmSize | `
 New-AzVM -ResourceGroupName $resourceGroup -Location $location -VM $vmConfig
 
   Write-Host "New VM created successfully."
-  
+
   Read-Host -Prompt "Press Enter to exit"
