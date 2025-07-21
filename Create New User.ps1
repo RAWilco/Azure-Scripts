@@ -22,4 +22,5 @@ New-AzADUser `
   -Password $SecurePassword
 
   Write-Host "New user created successfully."
+  
   Read-Host -Prompt "Press Enter to exit"

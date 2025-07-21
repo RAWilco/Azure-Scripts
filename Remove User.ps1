@@ -15,4 +15,5 @@ Connect-AzAccount
 Remove-AzADUser -DisplayName "Jane Doe"
 
   Write-Host "User removed."
+  
   Read-Host -Prompt "Press Enter to exit"
