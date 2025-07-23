@@ -13,12 +13,16 @@ Import-Module Az.Compute
 #Login
 Connect-AzAccount
 
+$resourceGroup = Read-Host "Name the resource group for the VM (e.g. myResourceGroup)"
+$VMName = Read-Host "Enter a name for the VM (e.g. myVM)"
+$Location = Read-Host "Enter the Azure region for the VM (e.g. eastus, westus, etc.)"
+
 New-AzResourceGroup -Name 'myResourceGroup2' -Location 'eastus'
 
 New-AzVm `
-    -ResourceGroupName 'myResourceGroup2' `
-    -Name 'myVM' `
-    -Location 'eastus' `
+    -ResourceGroupName $resourceGroup `
+    -Name $VMName `
+    -Location $Location `
     -Image 'MicrosoftWindowsServer:WindowsServer:2022-datacenter-azure-edition:latest' `
     -VirtualNetworkName 'myVnet' `
     -SubnetName 'mySubnet' `
@@ -28,6 +32,6 @@ New-AzVm `
 
     Read-Host VM creation complete. Verify on Azure portal. Then press enter to remove the resource group and all resources created.
 
-    Remove-AzResourceGroup -Name 'myResourceGroup2'
+    Remove-AzResourceGroup -Name $resourceGroup
 
     Read-Host "Resource group and all resources have been removed."
