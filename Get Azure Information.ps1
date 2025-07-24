@@ -83,6 +83,6 @@ Append-Section -Header "Resources" -Command { Get-AzResource }
 Append-Section -Header "Virtual Machines" -Command { Get-AzVM }
 
 # Done
-Write-Host "✅ Azure info exported to: $outputFile"
+Write-Host "Azure info exported to: $outputFile"
 
 Read-Host -Prompt "Press Enter to exit"
