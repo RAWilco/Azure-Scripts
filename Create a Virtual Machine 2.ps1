@@ -61,13 +61,6 @@ Get-AzVirtualNetwork -Name $vnetName
 # Verify created Network Security Group
 Get-AzNetworkSecurityGroup -Name $nsgName
 
-# Create Network Interface
-#$publicIp = New-AzPublicIpAddress -Name "myPublicIpAddress" -ResourceGroupName $resourceGroup `
-#    -Location $Location -AllocationMethod Dynamic
-
-#$nic = New-AzNetworkInterface -Name "myNic" -ResourceGroupName $resourceGroup `
-  #  -Location $Location -SubnetId $subnet.Id -PublicIpAddressId $publicIp.Id
-
 # Create VM
 New-AzVm `
     -ResourceGroupName $resourceGroup `
