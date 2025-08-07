@@ -17,8 +17,8 @@ $resourceGroup = Read-Host "Name the resource group for the VM (e.g. myResourceG
 $VMName = Read-Host "Enter a name for the VM (e.g. myVM)"
 $Location = Read-Host "Enter the Azure region for the VM (e.g. eastus, westus, etc.)"
 
-# Prompt for VM login credentials
-$cred = Get-Credential -Message "Enter the username and password for the VM"
+Write-Host "Enter the username and password for the VM"
+$cred = Get-Credential
 
 # Create resource group
 New-AzResourceGroup -Name $resourceGroup -Location $Location
